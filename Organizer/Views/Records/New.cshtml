@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Album</title>
+</head>
+<body>
+  @using Organizer.Models;
+  
+  <form action="/artist/@Model.Name/records" method="post">
+    <label for="albumName">Name of Album</label>
+    <input id="albumName" name="albumName" type="text">
+    <label for="artist">Artist</label>
+    <select name="artist" id="artist">
+    @foreach(Artist artist in @Model)
+    {
+      <option>@artist.Name</option>
+    }
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
