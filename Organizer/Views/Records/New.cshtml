@@ -9,16 +9,17 @@
 <body>
   @using Organizer.Models;
   
-  <form action="/artist/@Model.Name/records" method="post">
+  <form action="/artist/@Model/records" method="post">
     <label for="albumName">Name of Album</label>
     <input id="albumName" name="albumName" type="text">
-    <label for="artist">Artist</label>
-    <select name="artist" id="artist">
+    <input id="artist" value="@Model" name="artist" type="hidden">
+    <!-- <label for="artist">Artist</label> -->
+    <!-- <select name="artist" id="artist">
     @foreach(Artist artist in @Model)
     {
       <option>@artist.Name</option>
     }
-    </select>
+    </select> -->
     <button type="submit">Submit</button>
   </form>
 </body>
