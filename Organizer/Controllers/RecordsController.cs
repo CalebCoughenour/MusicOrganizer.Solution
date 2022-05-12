@@ -16,7 +16,7 @@ namespace Organizer.Controllers
     public ActionResult New(string artistName)
     {
       // List<Artist> artists = Artist.GetArtists();
-      return View(artistName);
+      return View("New", artistName);
     }
   }
 }

@@ -6,7 +6,7 @@ namespace Organizer.Controllers
 {
   public class ArtistController : Controller
   {
-    [HttpGet("/artists")]
+    [HttpGet("/artist")]
     public ActionResult Index()
     {
       List<Artist> allArtists = Artist.GetArtists();
@@ -19,13 +19,13 @@ namespace Organizer.Controllers
       return View();
     }
     
-    [HttpGet("/artists/{artistName}")]
+    [HttpGet("/artist/{artistName}")]
     public ActionResult Show(string artistName)
     {
       Artist artist = Artist.FindArtist(artistName);
       return View(artist);
     }
-    [HttpPost("/artists")]
+    [HttpPost("/artist")]
     public ActionResult Create(string artistName)
     {
       Artist newArtist = new Artist(artistName);

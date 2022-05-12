@@ -13,13 +13,13 @@
     <label for="albumName">Name of Album</label>
     <input id="albumName" name="albumName" type="text">
     <input id="artist" value="@Model" name="artist" type="hidden">
-    <!-- <label for="artist">Artist</label> -->
-    <!-- <select name="artist" id="artist">
+    @* <label for="artist">Artist</label> 
+    <select name="artist" id="artist">
     @foreach(Artist artist in @Model)
     {
       <option>@artist.Name</option>
     }
-    </select> -->
+    </select> *@
     <button type="submit">Submit</button>
   </form>
 </body>
