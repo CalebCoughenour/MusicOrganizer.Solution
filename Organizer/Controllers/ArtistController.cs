@@ -37,7 +37,7 @@ namespace Organizer.Controllers
       Artist artist = Artist.FindArtist(artistName);
       Album album = new Album(albumName, artistName);
       artist.Albums.Add(album);
-      return RedirectToAction("Index");
+      return Redirect($"/artist/{artistName}");
     }
   }
 }
